@@ -14,7 +14,8 @@ class StringCalculatorDataDrivenAddFixture:public testing::Test{
   void TearDown(){
         delete objUnderTest;
   }
-  void assertEachDataRow(string input,int expectedValue){
+public:
+void assertEachDataRow(string input,int expectedValue){
     int actualValue=objUnderTest->Add(input);
     ASSERT_EQ(actualValue,expectedValue);
 }
